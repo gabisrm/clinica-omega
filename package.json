@@ -1,0 +1,21 @@
+{
+  "name": "microserviceboilerplate",
+  "version": "1.0.0",
+  "description": "Microservice boilerplate for nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
