@@ -1,1 +1,1 @@
-MicroServiceBoilerplate
+Clínica Omega

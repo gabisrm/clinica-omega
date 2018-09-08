@@ -1,6 +1,5 @@
 const express = require('express'),
-    router = express.Router(),
-    request = require('request-promise-native');
+    router = express.Router();
 
 
 module.exports = (dbDriver) => {
