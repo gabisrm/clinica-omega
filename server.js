@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 //app.use(passport.initialize());
 
 //routes
-app.use('/example', require('./routes/example_routes')(dbDriver));
+app.use('/example', require('./routes/example_routes')());
 
 //static
 app.use(require('express').static(dirRaiz + '/public/static'));
