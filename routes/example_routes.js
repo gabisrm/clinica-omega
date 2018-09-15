@@ -1,13 +1,27 @@
 const express = require('express'),
+    sendMail = require('./../config/mail/mail').sendMail,
     router = express.Router();
+
+
+
 
 
 module.exports = () => {
 
-    
-    router.get('/prueba2', (req, res) => {
+
+    router.post('/nuevoMail', (req, res) => {
         // get body function
-        res.sendStatus(200);
+        console.log(req.body);
+
+
+        sendMail(req.body.mail, req.body.name, req.body.subject, req.body.text, (err, info) =>{
+            if(err !== null){
+                console.log("ERROR AL ENVIAR EMAIL: ", err);
+                res.sendStatus(500);
+            } else {
+                res.sendStatus(200);
+            }
+        })
     });
 
     return router;
