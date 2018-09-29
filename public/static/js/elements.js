@@ -246,7 +246,7 @@ $(document).ready(function()
 		    	{
 		    		var bar = new ProgressBar.Circle(loader,
 					{
-						color: '#32c69a',
+						color: '#1A9DD9',
 						// This has to be the same size as the maximum width to
 						// prevent clipping
 						strokeWidth: 3,
@@ -258,8 +258,8 @@ $(document).ready(function()
 						{
 							autoStyleContainer: false
 						},
-						from:{ color: '#32c69a', width: 3 },
-						to: { color: '#32c69a', width: 3 },
+						from:{ color: '#1A9DD9', width: 3 },
+						to: { color: '#1A9DD9', width: 3 },
 						// Set default step function for all animate calls
 						step: function(state, circle)
 						{
@@ -277,7 +277,7 @@ $(document).ready(function()
 							}
 						}
 					});
-					bar.text.style.fontFamily = '"Montserrat", sans-serif';
+					bar.text.style.fontFamily = '"Open+Sans", sans-serif';
 					bar.text.style.fontSize = '16px';
 					bar.text.style.fontWeight = '500';
 					bar.text.style.color = "#838383";

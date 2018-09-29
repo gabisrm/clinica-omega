@@ -25,7 +25,7 @@
 1. Fonts
 ***********/
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,900');
 
 /*********************************
 2. Body and some general stuff
@@ -41,8 +41,8 @@
 }
 body
 {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	font-weight: 400;
 	background: #FFFFFF;
 	color: #a5a5a5;
@@ -62,11 +62,11 @@ ul
 }
 p
 {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	line-height: 2;
 	font-weight: 400;
-	color: #929191;
+	color: #2B2A29;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -110,7 +110,7 @@ p a:hover::after
 }
 ::selection
 {
-	background: #32c69a;
+	background: #1A9DD9;
 	color: #FFFFFF;
 }
 p::selection
@@ -121,10 +121,10 @@ h1{font-size: 48px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
 h4{font-size: 18px;}
-h5{font-size: 14px;}
+h5{font-size: 16px;}
 h1, h2, h3, h4, h5, h6
 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -254,7 +254,7 @@ section
 {
 	width: 137px;
 	height: 54px;
-	background: #32c69a;
+	background: #1A9DD9;
 	overflow: hidden;
 }
 .button a
@@ -355,7 +355,7 @@ section
 .header.scrolled
 {
 	position: fixed;
-	top: -91px;
+	/*top: -91px;*/
 	left: 0;
 }
 .header_top
@@ -384,7 +384,7 @@ section
 {
 	position: relative;
 	font-size: 36px;
-	color: #32c69a;
+	color: #1A9DD9;
 	line-height: 0.75;
 	vertical-align: text-top;
 }
@@ -400,7 +400,7 @@ section
 }
 .header_top_nav ul li a
 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #838383;
 	-webkit-transition: all 200ms ease;
@@ -411,7 +411,7 @@ section
 }
 .header_top_nav ul li a:hover
 {
-	color: #32c69a;
+	color: #1A9DD9;
 }
 .header_top_phone
 {
@@ -420,7 +420,7 @@ section
 .header_top_phone i
 {
 	font-size: 22px;
-	color: #32c69a;
+	color: #1A9DD9;
 	vertical-align: middle;
 	transform: translateY(-1px);
 }
@@ -435,21 +435,7 @@ section
 .hamburger
 {
 	display: none;
-	cursor: pointer;
-}
-.hamburger i
-{
-	font-size: 18px;
-	color: #4c4c4c;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.hamburger i:hover
-{
-	color: #329fec;
+	
 }
 .header_nav
 {
@@ -462,7 +448,7 @@ section
 .header_nav_container
 {
 	z-index: 1;
-	background: #32c69a;
+	background: #1A9DD9;
 }
 .header_nav_content
 {
@@ -820,6 +806,7 @@ section
 	top: 38%;
 	left: 0;
 	width: 100%;
+	top: 15%;
 }
 .home_content
 {
@@ -832,6 +819,7 @@ section
 	color: #FFFFFF;
 	max-width: 570px;
 	line-height: 1.2;
+	margin-left: 50%;
 }
 .home_text
 {
@@ -851,11 +839,16 @@ section
 6. Info Boxes
 *********************************/
 
+.info_box_col
+	{
+		min-height: 650px;
+	}
+
 .info
 {
 	width: 100%;
 	background: #FFFFFF;
-	padding-top: 100px;
+	
 	padding-bottom: 100px;
 }
 .info_box
@@ -877,6 +870,7 @@ section
 	padding-top: 46px;
 	padding-right: 20px;
 	padding-bottom: 31px;
+	min-height: 350px;
 }
 .info_title
 {
@@ -884,13 +878,14 @@ section
 	font-weight: 600;
 	color: #404040;
 }
-.info_text
+.info_text p
 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #838383;
-	line-height: 1.95;
+	line-height: 1.6;
 	margin-top: 14px;
+	text-align: justify;
 }
 .info_button
 {
@@ -997,7 +992,7 @@ section
 {
 	width: 100%;
 	height: 54px;
-	background: #32c69a;
+	background: #1A9DD9;
 	border: none;
 	outline: none;
 	color: #FFFFFF;
@@ -1032,7 +1027,7 @@ section
 }
 .cta_subtitle
 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	color: rgba(255,255,255,0.76);
 	line-height: 1.5;
@@ -1057,7 +1052,7 @@ section
 }
 .icon_boxes_row
 {
-	margin-top: 100px;
+	margin-top: 70px;
 }
 .icon_box
 {
@@ -1077,11 +1072,11 @@ section
 	font-size: 20px;
 	font-weight: 600;
 	color: #404040;
-	padding-left: 25px;
+	
 }
 .icon_box_text
 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #838383;
 	line-height: 2.14;
@@ -1168,7 +1163,7 @@ section
 	bottom: 0;
 	width: 100%;
 	height: 4px;
-	background: #32c69a;
+	background: #1A9DD9;
 	content: '';
 }
 .dept_title
@@ -1194,7 +1189,7 @@ section
 }
 .dept_link a:hover
 {
-	color: #32c69a;
+	color: #1A9DD9;
 }
 .dept_slider_nav
 {
@@ -1208,7 +1203,7 @@ section
 	right: -106px;
 	width: 42px;
 	height: 42px;
-	background: #32c69a;
+	background: #1A9DD9;
 	text-align: center;
 	cursor: pointer;
 }
@@ -1277,7 +1272,7 @@ section
 	padding-left: 70px;
 	cursor: pointer;
 	color: #404040;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1312,8 +1307,8 @@ section
 	width: 50px;
 	height: 100%;
 	content: '+';
-	background: #32c69a;
-	font-size: 14px;
+	background: #1A9DD9;
+	font-size: 16px;
 	color: #FFFFFF;
 	font-weight: 500;
 	-webkit-transition: all 200ms ease;
@@ -1324,7 +1319,7 @@ section
 }
 .accordion.active
 {
-	background: #32c69a;
+	background: #1A9DD9;
 	color: #FFFFFF;
 }
 .accordion.active::after
@@ -1350,7 +1345,7 @@ section
 }
 .accordion_panel p
 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	padding-top: 35px;
 	color: #838383;
@@ -1416,7 +1411,7 @@ section
 }
 .latest_title a:hover
 {
-	color: #32c69a;
+	color: #1A9DD9;
 }
 .latest_info
 {
@@ -1448,7 +1443,7 @@ section
 }
 .latest_info ul li a:hover
 {
-	color: #32c69a;
+	color: #1A9DD9;
 }
 .latest_comments
 {
@@ -1458,7 +1453,7 @@ section
 {
 	font-size: 12px;
 	font-weight: 500;
-	color: #32c69a;
+	color: #1A9DD9;
 }
 
 /*********************************
@@ -1486,7 +1481,7 @@ section
 }
 .footer_about_text
 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #d3d3d3;
 	line-height: 2.14;
@@ -1578,7 +1573,7 @@ section
 {
 	width: 275px;
 	height: 54px;
-	background: #32c69a;
+	background: #1A9DD9;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -1609,7 +1604,7 @@ section
 }
 .hours_list li div
 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #FFFFFF;
 }
@@ -1645,7 +1640,7 @@ section
 }
 .footer_nav ul li a:hover
 {
-	color: #32c69a;
+	color: #1A9DD9;
 }
 .footer_links
 {
@@ -1663,7 +1658,7 @@ section
 }
 .footer_links ul li a
 {
-	font-size: 11px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #a0a1a1;
 	-webkit-transition: all 200ms ease;
@@ -1674,18 +1669,124 @@ section
 }
 .footer_links ul li a:hover
 {
-	color: #32c69a;
+	color: #1A9DD9;
 }
 .footer_phone span
 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
-	color: #32c69a;
+	color: #1A9DD9;
 }
 .footer_phone i
 {
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 20px;
-	color: #32c69a;
+	color: #1A9DD9;
+}
+
+
+/*********************************
+7. Boxes
+*********************************/
+
+.boxes
+{
+	width: 100%;
+}
+.box
+{
+	width: calc(100% / 3);
+	padding-top: 79px;
+	padding-left: 90px;
+	padding-bottom: 64px;
+	padding-right: 30px;
+}
+.box_title
+{
+	font-size: 30px;
+	font-weight: 600;
+	color: #FFFFFF;
+	line-height: 1.2;
+}
+.box_subtitle
+{
+	font-size: 11px;
+	font-weight: 600;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	line-height: 0.75;
+	margin-top: 16px;
+	padding-left: 1px;
+}
+
+#intro_logo {
+	max-width:  70%; max-height:100%
+}
+
+.box_text
+{
+	margin-top: 60px;
+	font-size: 17px;
+	font-weight: 500;
+	color: white;
+	line-height: 2.14;
+	padding-left: 3px;
+}
+
+.link-intro{
+	color: #1A9DD9;
+}
+.link-intro:hover{
+	color:#03618D;
+}
+
+.bold-box {
+	font-weight: bold;
+	font-style: inherit;
+}
+.box_button
+{
+	margin-top: 77px;
+}
+
+
+/*********************************
+6. About
+*********************************/
+
+.about
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	text-align: justify;
+}
+
+.about_text_highlight
+{
+	font-size: 16px;
+	font-weight: 700;
+	color: #404040;
+	margin-top: 28px;
+}
+.about_text
+{
+	margin-top: 13px;
+}
+.about_image
+{
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 25px;
+}
+.about_button
+{
+	margin-top: 49px;
 }
