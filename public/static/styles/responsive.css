@@ -526,7 +526,7 @@
 	} */
 
 	#intro_logo{
-		max-width: 40%;
+		max-width: 30%;
 		
 	}
 
@@ -539,6 +539,10 @@
 
 	.footer_contact_form div input {
 		width: 100%;
+	}
+
+	.about {
+		padding-top: 40px;
 	}
 }
 
