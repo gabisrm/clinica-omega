@@ -75,10 +75,11 @@
 	{
 		margin-top: 30px;
 	}
-	/* .footer_contact_form div input
+	.footer_contact_form div input
 	{
 		width: 100%;
 	}
+	/*
 	.footer_nav ul li:not(:last-child)
 	{
 		margin-right: 40px;
@@ -434,6 +435,10 @@
 	{
 		margin-left: 54px;
 	} */
+
+	.footer_contact_form div input {
+		width: 100%;
+	}
 }
 
 /************
@@ -530,6 +535,10 @@
 	}
 	.footer_bar_content {
 		align-items: center!important;
+	}
+
+	.footer_contact_form div input {
+		width: 100%;
 	}
 }
 
@@ -649,7 +658,13 @@
 
 @media only screen and (max-width: 539px)
 {
-	
+	.header_top_phone a span {
+		display:none;
+	}
+
+	.footer_phone a span {
+		display: none;
+	}
 }
 
 /************
@@ -682,11 +697,18 @@
 		flex-direction: row!important;
 	}
 
-	.header_top_phone a span {
-		display:none;
+	
+
+	.info_box_col {
+		min-height: 450px;
 	}
 
-	.footer_phone a span {
-		display: none;
+	.footer_contact_form div input {
+		width: 100%;
 	}
+
+	.logo-top {
+
+		padding-right: 0px; 
+	   }
 }

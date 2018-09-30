@@ -356,11 +356,11 @@
 	{
 		padding-left: 30px;
 	}
-	/* .footer_contact_form div input
+	 .footer_contact_form div input
 	{
 		width: 100%;
 	}
-	.footer_nav ul li:not(:last-child)
+	/*.footer_nav ul li:not(:last-child)
 	{
 		margin-right: 40px;
 	} */
@@ -622,5 +622,10 @@
 
 	.footer_phone a span {
 		display: none;
+	}
+
+	.logo-top {
+
+     padding-right: 0px; 
 	}
 }

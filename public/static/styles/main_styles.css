@@ -841,7 +841,7 @@ section
 
 .info_box_col
 	{
-		min-height: 650px;
+		min-height: 700px;
 	}
 
 .info
@@ -854,6 +854,7 @@ section
 .info_box
 {
 	width: 100%;
+	min-height: 650px;
 	background: #f4f8fb;
 }
 .info_image
@@ -1789,4 +1790,10 @@ section
 .about_button
 {
 	margin-top: 49px;
+}
+
+.logo-top {
+	max-height: 300%;
+	max-width: 50%;
+	padding-right: 10%;
 }

@@ -1364,3 +1364,18 @@ section
 	font-size: 20px;
 	color: #1A9DD9;
 }
+
+.logo-top {
+	max-height: 300%;
+	max-width: 50%;
+	padding-right: 10%;
+}
+
+.about
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	text-align: justify;
+}
