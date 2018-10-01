@@ -27,6 +27,6 @@ app.use(require('express').static(dirRaiz + '/public/static'));
 
 
 //start server
-http.listen(SERVICE_PORT, '0.0.0.0', function () {
+http.listen(SERVICE_PORT, function () {
     console.log('Servidor express escuchando en puerto 3000');
 });
