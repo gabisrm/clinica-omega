@@ -14,5 +14,8 @@
     "express": "^4.16.2",
     "morgan": "^1.9.0",
     "nodemailer": "^4.6.8"
+  },
+  "devDependencies": {
+    "purify-css": "^1.2.5"
   }
 }
