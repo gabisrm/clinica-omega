@@ -18,8 +18,7 @@ function isValidEmailAddress(emailAddress) {
 	return pattern.test(emailAddress);
 };
 
-$(document).ready(function()
-{
+$(document).ready(function () {
 	"use strict";
 
 	/* 
@@ -32,18 +31,15 @@ $(document).ready(function()
 
 	setHeader();
 
-	$(window).on('resize', function()
-	{
+	$(window).on('resize', function () {
 		setHeader();
 
-		setTimeout(function()
-		{
+		setTimeout(function () {
 			$(window).trigger('resize.px.parallax');
 		}, 375);
 	});
 
-	$(document).on('scroll', function()
-	{
+	$(document).on('scroll', function () {
 		setHeader();
 	});
 
@@ -51,43 +47,38 @@ $(document).ready(function()
 	$('#contact_form, #footer_contact_form').submit(function (event) {
 		event.preventDefault();
 		var mail = $('#contact_email').val();
-		console.log("Mail:", mail);
 		$('#nocheck-condiciones-form').addClass('hidden');
 		if (isValidEmailAddress(mail)) {
-			console.log("Mail valido");
 			$('#error-email-form').addClass('hidden');
 			//cojo datos
 			var name = $('#contact_input').val();
 			//TODO check que no esté vacío
-			console.log("NAME: ", name);
-			var subject = $('#contact_subject').val();
-
-			if (subject === "") subject = null;
-			console.log("SUBJECT: ", subject);
 
 			var text = $('#contact_textarea').val(); //tambien comprobar que no esté vacío
 
-			console.log("TEXT: ", text);
-
 			if (text !== "" && name !== "") {
-				$.post('/nuevoMail', { mail: mail, name: name, subject: subject, text: text }).done(function () {
-					$('#inputSubmitMail').addClass('hidden');
-					$('.submitOk').removeClass('hidden');
+				$.post('/nuevoMail', { mail: mail, name: name, text: text }).done(function () {
+					var sentButton = $('#form_button_send');
+					sentButton.text("¡Enviado!");
+					sentButton.css('background-color', '#59948c');
+					$("#footer_contact_form :input").prop("disabled", true);
 				})
 					.fail(function () {
-						$('#inputSubmitMail').addClass('hidden');
-						$('.submitWrong').removeClass('hidden');
+						var sentButton = $('#form_button_send');
+						sentButton.text("¡Error!");
+						sentButton.css('background-color', '#FF9494');
 					});
 			} else {
-				//manejo error TODO
+				var sentButton = $('#form_button_send');
+				sentButton.text("¡Error!");
+				sentButton.css('background-color', '#FF9494');
 			}
 
 
 		} else {
-			console.log("Error");
-			$('.submitOk').addClass('hidden');
-			$('.submitWrong').addClass('hidden');
-			$('#error-email-form').removeClass('hidden');
+			var sentButton = $('#form_button_send');
+			sentButton.text("¡Error!");
+			sentButton.css('background-color', '#FF9494');
 		}
 	});
 
@@ -98,14 +89,11 @@ $(document).ready(function()
 
 	*/
 
-	function setHeader()
-	{
-		if($(window).scrollTop() > 91)
-		{
+	function setHeader() {
+		if ($(window).scrollTop() > 91) {
 			header.addClass('scrolled');
 		}
-		else
-		{
+		else {
 			header.removeClass('scrolled');
 		}
 	}

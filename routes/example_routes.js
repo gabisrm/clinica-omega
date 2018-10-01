@@ -14,7 +14,7 @@ module.exports = () => {
         console.log(req.body);
 
 
-        sendMail(req.body.mail, req.body.name, req.body.subject, req.body.text, (err, info) =>{
+        sendMail(req.body.mail, req.body.name,req.body.text, (err, info) =>{
             if(err !== null){
                 console.log("ERROR AL ENVIAR EMAIL: ", err);
                 res.sendStatus(500);
