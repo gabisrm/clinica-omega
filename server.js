@@ -2,12 +2,14 @@ const app = require('express')(),
     bodyParser = require('body-parser'),
     morgan = require('morgan'),
     http = require('http').Server(app),
+    compression = require('compression'),
     SERVICE_PORT = 3000,
     dirRaiz = __dirname;
 
 
 
 //middleware
+app.use(compression());
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
     extended: true

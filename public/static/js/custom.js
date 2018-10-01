@@ -13,6 +13,11 @@
 
 ******************************/
 
+function isValidEmailAddress(emailAddress) {
+	var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+	return pattern.test(emailAddress);
+};
+
 $(document).ready(function()
 {
 	"use strict";
@@ -24,8 +29,6 @@ $(document).ready(function()
 	*/
 
 	var header = $('.header');
-	var menu = $('.menu');
-	var menuActive = false;
 
 	setHeader();
 
@@ -44,9 +47,50 @@ $(document).ready(function()
 		setHeader();
 	});
 
-	initMenu();
-	initDeptSlider();
-	initAccordions();
+
+	$('#contact_form, #footer_contact_form').submit(function (event) {
+		event.preventDefault();
+		var mail = $('#contact_email').val();
+		console.log("Mail:", mail);
+		$('#nocheck-condiciones-form').addClass('hidden');
+		if (isValidEmailAddress(mail)) {
+			console.log("Mail valido");
+			$('#error-email-form').addClass('hidden');
+			//cojo datos
+			var name = $('#contact_input').val();
+			//TODO check que no esté vacío
+			console.log("NAME: ", name);
+			var subject = $('#contact_subject').val();
+
+			if (subject === "") subject = null;
+			console.log("SUBJECT: ", subject);
+
+			var text = $('#contact_textarea').val(); //tambien comprobar que no esté vacío
+
+			console.log("TEXT: ", text);
+
+			if (text !== "" && name !== "") {
+				$.post('/nuevoMail', { mail: mail, name: name, subject: subject, text: text }).done(function () {
+					$('#inputSubmitMail').addClass('hidden');
+					$('.submitOk').removeClass('hidden');
+				})
+					.fail(function () {
+						$('#inputSubmitMail').addClass('hidden');
+						$('.submitWrong').removeClass('hidden');
+					});
+			} else {
+				//manejo error TODO
+			}
+
+
+		} else {
+			console.log("Error");
+			$('.submitOk').addClass('hidden');
+			$('.submitWrong').addClass('hidden');
+			$('#error-email-form').removeClass('hidden');
+		}
+	});
+
 
 	/* 
 
@@ -65,166 +109,4 @@ $(document).ready(function()
 			header.removeClass('scrolled');
 		}
 	}
-
-	/* 
-
-	3. Init Menu
-
-	*/
-
-	function initMenu()
-	{
-		if($('.hamburger').length && $('.menu').length)
-		{
-			var hamb = $('.hamburger');
-			var close = $('.menu_close_container');
-
-			hamb.on('click', function()
-			{
-				if(!menuActive)
-				{
-					openMenu();
-				}
-				else
-				{
-					closeMenu();
-				}
-			});
-
-			close.on('click', function()
-			{
-				if(!menuActive)
-				{
-					openMenu();
-				}
-				else
-				{
-					closeMenu();
-				}
-			});
-
-	
-		}
-	}
-
-	function openMenu()
-	{
-		menu.addClass('active');
-		menuActive = true;
-	}
-
-	function closeMenu()
-	{
-		menu.removeClass('active');
-		menuActive = false;
-	}
-
-	/* 
-
-	4. Init Dept Slider
-
-	*/
-
-	function initDeptSlider()
-	{
-		if($('.dept_slider').length)
-		{
-			var deptSlider = $('.dept_slider');
-			deptSlider.owlCarousel(
-			{
-				items:4,
-				autoplay:true,
-				loop:true,
-				nav:false,
-				dots:false,
-				margin:30,
-				smartSpeed:1200,
-				responsive:
-				{
-					0:{items:1},
-					768:{items:2},
-					992:{items:3},
-					1200:{items:4}
-				}
-			});
-
-			if($('.dept_slider_nav').length)
-			{
-				var next = $('.dept_slider_nav');
-				next.on('click', function()
-				{
-					deptSlider.trigger('next.owl.carousel');
-				});
-			}
-		}
-	}
-
-	/* 
-
-	5. Init Accordions
-
-	*/
-
-	function initAccordions()
-	{
-		if($('.accordion').length)
-		{
-			var accs = $('.accordion');
-
-			accs.each(function()
-			{
-				var acc = $(this);
-
-				if(acc.hasClass('active'))
-				{
-					var panel = $(acc.next());
-					var panelH = panel.prop('scrollHeight') + "px";
-					
-					if(panel.css('max-height') == "0px")
-					{
-						panel.css('max-height', panel.prop('scrollHeight') + "px");
-					}
-					else
-					{
-						panel.css('max-height', "0px");
-					} 
-				}
-
-				acc.on('click', function()
-				{
-					if(acc.hasClass('active'))
-					{
-						acc.removeClass('active');
-						var panel = $(acc.next());
-						var panelH = panel.prop('scrollHeight') + "px";
-						
-						if(panel.css('max-height') == "0px")
-						{
-							panel.css('max-height', panel.prop('scrollHeight') + "px");
-						}
-						else
-						{
-							panel.css('max-height', "0px");
-						} 
-					}
-					else
-					{
-						acc.addClass('active');
-						var panel = $(acc.next());
-						var panelH = panel.prop('scrollHeight') + "px";
-						
-						if(panel.css('max-height') == "0px")
-						{
-							panel.css('max-height', panel.prop('scrollHeight') + "px");
-						}
-						else
-						{
-							panel.css('max-height', "0px");
-						} 
-					}
-				});
-			});
-		}
-	}
-
-});
+})
