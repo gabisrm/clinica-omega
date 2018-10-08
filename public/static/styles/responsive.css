@@ -114,6 +114,9 @@
 
 @media only screen and (max-width: 991px)
 {
+	.header_top_extra .header_top_phone{
+		display: none;
+	}
 	.home_title
 	{
 		font-size: 48px;
@@ -465,6 +468,13 @@
 
 @media only screen and (max-width: 991px)
 {
+
+	.icon_boxes_row {
+		margin-top: 45px;
+	}
+	.about {
+		padding-bottom: 40px;
+	}
 	.home_title
 	{
 		font-size: 48px;
@@ -493,6 +503,10 @@
 	.tab_panels
 	{
 		margin-top: 40px;
+	}
+
+	.footer_col {
+		 padding-top: 0px; 
 	}
 	/* .footer_col:not(:last-child)
 	{
