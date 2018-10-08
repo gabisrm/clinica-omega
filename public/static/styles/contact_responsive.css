@@ -105,11 +105,7 @@
 		top: 0px;
 		left: 0;
 	}
-	.header_top_extra,
-	.header_nav
-	{
-		display: none !important;
-	}
+	
 	.hamburger
 	{
 		display: block;
@@ -394,6 +390,12 @@
 
 @media only screen and (max-width: 991px)
 {
+	.header_top_extra .header_top_phone{
+		display: none;
+	}
+	.contact_info_title-2 {
+		padding-top: 50px;
+	}
 	.home_title
 	{
 		font-size: 48px;
@@ -405,11 +407,7 @@
 		top: 0px;
 		left: 0;
 	}
-	.header_top_extra,
-	.header_nav
-	{
-		display: none !important;
-	}
+	
 	.hamburger
 	{
 		display: block;
@@ -423,6 +421,10 @@
 	{
 		margin-top: 40px;
 	}
+
+	.footer_col {
+		padding-top: 0px; 
+   }
 	/* .footer_col:not(:last-child)
 	{
 		margin-bottom: 100px;
@@ -595,6 +597,15 @@
 	.footer_bar_content {
 		flex-direction: row!important;
 	}
+
+	.header_top_phone a span {
+		display:none;
+	}
+
+	.footer_phone a span {
+		display: none;
+	}
+
 }
 
 /************
@@ -623,6 +634,7 @@
 	.footer_phone a span {
 		display: none;
 	}
+	
 
 	.logo-top {
 

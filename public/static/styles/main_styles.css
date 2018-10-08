@@ -235,16 +235,17 @@ section
 	width: 100%;
 	height: 100%;
 }
-.background_image
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+.background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 95%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-left: 2.5%;
+    border-radius: 28px;
 }
 .nopadding
 {
@@ -436,6 +437,25 @@ section
 {
 	display: none;
 	
+}
+.hamburger
+{
+	display: none;
+	cursor: pointer;
+}
+.hamburger i
+{
+	font-size: 22px;
+	color: #1A9DD9;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.hamburger i:hover
+{
+	color: #329fec;
 }
 .header_nav
 {
@@ -798,7 +818,7 @@ section
 .home
 {
 	width: 100%;
-	height: 874px;
+	height: 600px;
 }
 .home_container
 {
@@ -841,7 +861,7 @@ section
 
 .info_box_col
 	{
-		min-height: 700px;
+		min-height: 640px;
 	}
 
 .info
@@ -849,21 +869,22 @@ section
 	width: 100%;
 	background: #FFFFFF;
 	
-	padding-bottom: 100px;
+	padding-bottom: 60px;
 }
 .info_box
 {
 	width: 100%;
 	min-height: 610px;
-	background: #f4f8fb;
+	background:  #239CD8;
+	border-radius: 28px;
 }
 .info_image
 {
 	width: 100%;
 }
-.info_image img
-{
-	max-width: 100%;
+.info_image img {
+    border-radius: 25px 25px 0px 0px;
+    max-width: 100%;
 }
 .info_content
 {
@@ -877,13 +898,13 @@ section
 {
 	font-size: 20px;
 	font-weight: 600;
-	color: #404040;
+	color: white;
 }
 .info_text p
 {
 	font-size: 16px;
 	font-weight: 500;
-	color: #838383;
+	color:white;
 	line-height: 1.6;
 	margin-top: 14px;
 	text-align: justify;
@@ -1466,11 +1487,10 @@ section
 	display: block;
 	position: relative;
 	width: 100%;
-	padding-top: 64px;
 }
 .footer_content
 {
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 }
 .footer_about
 {
@@ -1796,4 +1816,8 @@ section
 	max-height: 300%;
 	max-width: 50%;
 	padding-right: 10%;
+}
+
+.footer_col {
+	padding-top: 64px;
 }
