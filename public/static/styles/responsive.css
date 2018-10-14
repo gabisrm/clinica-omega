@@ -450,7 +450,13 @@
 
 @media only screen and (max-width: 1100px)
 {
+	.prev2{
+		margin-left: 10%;
+	}
 	
+	.next2{
+		margin-right: 10%;
+	}
 }
 
 /************
@@ -512,36 +518,14 @@
 	.footer_col {
 		 padding-top: 0px; 
 	}
-	/* .footer_col:not(:last-child)
-	{
-		margin-bottom: 100px;
+	
+	.prev2{
+		margin-left: 0%;
 	}
-	.footer_contact
-	{
-		padding-top: 0;
+	
+	.next2{
+		margin-right: 0%;
 	}
-	.footer_bar_content
-	{
-		height: auto;
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
-	.footer_nav ul li:not(:last-child)
-	{
-		margin-bottom: 8px;
-	} */
-	/* .footer_links ul li:not(:last-child)::after
-	{
-		display: none;
-	} */
-	/* .footer_phone
-	{
-		margin-left: 80px;
-	} */
-	/* .footer_links ul li:not(:last-child)
-	{
-		margin-bottom: 7px;
-	} */
 
 	#intro_logo{
 		max-width: 30%;
@@ -570,7 +554,10 @@
 
 @media only screen and (max-width: 959px)
 {
-	
+	#carouselExampleSlidesOnly2 {
+		margin-left: 60px;
+		margin-right: 60px;
+	}
 }
 
 /************
@@ -579,7 +566,10 @@
 
 @media only screen and (max-width: 880px)
 {
-	
+	#carouselExampleSlidesOnly2 {
+		margin-left: 60px;
+		margin-right: 60px;
+	}
 }
 
 /************
@@ -588,7 +578,10 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+	#carouselExampleSlidesOnly2 {
+		margin-left: 60px;
+		margin-right: 60px;
+	}
 }
 
 /************
@@ -600,6 +593,10 @@
 	.box
 	{
 		padding-left: 60px;
+	}
+	#carouselExampleSlidesOnly2 {
+		margin-left: 60px;
+		margin-right: 60px;
 	}
 }
 
@@ -672,6 +669,10 @@
 	.footer_bar_content {
 		flex-direction: row!important;
 	}
+	#carouselExampleSlidesOnly2 {
+		margin-left: 60px;
+		margin-right: 60px;
+	}
 }
 
 /************
@@ -687,6 +688,10 @@
 	.footer_phone a span {
 		display: none;
 	}
+	#carouselExampleSlidesOnly2 {
+		margin-left: 60px;
+		margin-right: 60px;
+	}
 }
 
 /************
@@ -698,6 +703,10 @@
 	.footer_bar_content {
 		flex-direction: row!important;
 	}
+	#carouselExampleSlidesOnly2 {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
 }
 
 /************
@@ -706,7 +715,10 @@
 
 @media only screen and (max-width: 479px)
 {
-	
+	#carouselExampleSlidesOnly2 {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
 }
 
 /************
@@ -737,8 +749,8 @@
 	   }
 
 	#carouselExampleSlidesOnly2 {
-		margin-left: 30px;
-		margin-right: 30px;
+		margin-left: 40px;
+		margin-right: 40px;
 	}
 	}
 
