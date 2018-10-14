@@ -38,7 +38,8 @@
 		<!-- Home -->
 
 		<div class="home d-flex  justify-content-center align-items-center" style="padding-top:70px;">
-			<div id="carouselExampleSlidesOnly" class="carousel slide justify-content-center align-items-center" data-ride="carousel" data-interval="4000" >
+			<div id="carouselExampleSlidesOnly" class="carousel slide justify-content-center align-items-center" data-ride="carousel"
+			 data-interval="4000">
 				<div class="carousel-inner ">
 					<div class="carousel-item active">
 						<img class="d-block w-100 " src="images/seleccion/IMG_20180922_131604.jpg" alt="Box Dental">
@@ -520,12 +521,18 @@
 	<script src="js/custom.min.js"></script>
 	<script src="js/jquery.bcSwipe.min.js"></script>
 	<script>
-		$('.carousel').bcSwipe({ threshold: 50 });
-		setTimeout(function () {
-			$('#carouselExampleSlidesOnly').carousel({
+		$(document).ready(function () {
+			$('.carousel').bcSwipe({ threshold: 50 });
+			setTimeout(function () {
+				$('#carouselExampleSlidesOnly').carousel({
+					interval: 4000
+				})
+			}, 2000);
+			$('#carouselExampleSlidesOnly2').carousel({
 				interval: 4000
 			})
-		}, 2000);
+		})
+
 	</script>
 </body>
 
