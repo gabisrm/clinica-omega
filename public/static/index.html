@@ -16,6 +16,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Clínica Dental Omega, ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="dist/main.css">
 </head>
 
@@ -29,8 +30,28 @@
 
 		<!-- Home -->
 
-		<div class="home">
-			<div class="background_image" style="background-image:url(images/entrance_01.jpg); height: 100%; border-radius: 0px;"></div>
+		<div class="home d-flex  justify-content-center align-items-center" style="padding-top:70px;">
+			<div id="carouselExampleSlidesOnly" class="carousel slide justify-content-center align-items-center" data-ride="carousel">
+				<div class="carousel-inner ">
+					<div class="carousel-item active">
+						<img class="d-block w-100 " src="images/seleccion/IMG_20180922_131604.jpg" alt="Box Dental">
+					</div>
+					<div class="carousel-item ">
+						<img class="d-block w-100 " src="images/seleccion/IMG_20180922_131432.jpg" alt="Dental Reception">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100 " src="images/seleccion/IMG_20180922_131554.jpg" alt="Box Dental 2">
+					</div>
+
+					<div class="carousel-item">
+						<img class="d-block w-100 " src="images/seleccion/IMG_20180922_131934.jpg" alt="Dental equipment">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100 " src="images/seleccion/IMG_20180922_132250.jpg" alt="Dental Reception 2">
+					</div>
+				</div>
+			</div>
+			<!-- <div class="background_image" style="background-image:url(images/entrance_01.jpg); height: 100%; border-radius: 0px;"></div> -->
 
 			<!-- Header -->
 
@@ -42,17 +63,23 @@
 								<div class="col">
 									<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
 										<div class="logo logo-top">
-											<img src="images/logo_clinica_dental_omega_color.png" alt="Clínica Dental Omega Logo"
-												 style="    max-height: 91px;
+											<img src="images/logo_clinica_dental_omega_color.png" alt="Clínica Dental Omega Logo" style="    max-height: 91px;
 										max-width: 100%;">
 										</div>
 										<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
 											<div class="header_top_nav">
-												<ul class="d-flex flex-row align-items-center justify-content-start">
+												<ul class="d-flex flex-row align-items-center justify-content-start" style="padding-left: 20px;">
 													<li><a href="https://www.facebook.com/pages/category/General-Dentist/Cl%C3%ADnica-Dental-Omega-154012201967610/"><i
 															 class="fa fa-facebook" aria-hidden="true"></i></a></li>
 													<li><a href="https://www.instagram.com/dentalomegatorremolinos/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 													<li><a href="contact.html">Contacto</a></li>
+												</ul>
+												<ul class="d-flex flex-row align-items-center justify-content-start">
+													<li><img src="images/Spain.png" alt="Idioma Español" style="border-radius: 10em;"></li>
+													<li><img src="images/british2.png" alt="Idioma Inglés" style="border-radius: 10em;"></li>
+													<li><img src="images/France.png" alt="Idioma Francés" style="border-radius: 10em;"></li>
+													<li><img src="images/Russian Federation.png" alt="Idioma Ruso" style="border-radius: 10em;"></li>
+
 												</ul>
 											</div>
 											<div class="header_top_phone">
@@ -82,13 +109,30 @@
 				</div>
 			</header>
 
-			<div class="home_container">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<div class="home_content">
-							</div>
-						</div>
+
+		</div>
+
+		<div class="about d-flex justify-content-center align-items-center " style="padding-bottom: 0px;">
+			<div id="carouselExampleSlidesOnly2" class="carousel slide "
+			 data-ride="carousel">
+				<div class="carousel-inner ">
+					<div class="carousel-item active">
+						
+						<p class="opinion-name font-weight-bold">Carlos G. <span class="innser-stars-opinion"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
+						<blockquote class="opinion-text font-italic">Me ha salido la ortodoncia casi a mitad de precio!</blockquote>
+					</div>
+					<div class="carousel-item ">
+						<p class="opinion-name font-weight-bold">María P.<span class="innser-stars-opinion"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
+						<blockquote class="opinion-text font-italic">Gracias por el trato tan humano. Gran equipo.</blockquote>
+					</div>
+					<div class="carousel-item">
+						<p class="opinion-name font-weight-bold">Pepe A.<span class="innser-stars-opinion"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
+						<blockquote class="opinion-text font-italic">Por fin me llevo bien con mi dentista ;)</blockquote>
+					</div>
+
+					<div class="carousel-item">
+						<p class="opinion-name font-weight-bold">Matías T.<span class="innser-stars-opinion"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
+						<blockquote class="opinion-text font-italic">Estupenda ortodoncia! Muy contento con el Invisalign y el precio.</blockquote>
 					</div>
 				</div>
 			</div>
@@ -148,6 +192,7 @@
 										tanto la estética de la boca como la función masticatoria.</p>
 									<p>Se puede aplicar en sus diferentes tipos
 										de aparatología que son aparato fijo, aparato removible y aparato invisible.</p>
+									<p class="text-right font-weight-bold">Dra. Caballero Fernández</p>
 								</div>
 
 
@@ -171,6 +216,7 @@
 										perdido.</p>
 									<p>Es la opción fija y más innovadora para
 										reponer los dientes de por vida.</p>
+									<p class="text-right font-weight-bold">Dra. Iriarte</p>
 								</div>
 
 							</div>
@@ -192,6 +238,7 @@
 										una sonrisa más blanca y brillante.</p>
 									<p>Se puede realizar en la comodidad de su
 										casa o bien en clínica, tanto en dientes vitales como en los no vitales.</p>
+									<p class="text-right font-weight-bold">Dra. Rocchi, Dr. Bustamante</p>
 								</div>
 
 
@@ -214,6 +261,7 @@
 										mayores.</p>
 									<p>Existe una gran variedad de prótesis para
 										las cuales se emplean materiales distintos en función del medio oral presentado.</p>
+									<p class="text-right font-weight-bold">Dr. Bustamante, Dra. Rocchi</p>
 								</div>
 
 							</div>
@@ -236,6 +284,7 @@
 										finalidad de ocultar la pieza dental real.</p>
 									<p>Es un procedimiento que se ha popularizado ya que se obtienen unos resultados
 										muy naturales.</p>
+									<p class="text-right font-weight-bold">Dra. Rocchi, Dr. Bustamante</p>
 								</div>
 
 							</div>
@@ -256,6 +305,7 @@
 									<p>Lo más común es realizar empastes con
 										composite que además de ser muy duradero y lograr imitar el color del diente,
 										posee unas excelentes propiedades ópticas y biomecánicas.</p>
+									<p class="text-right font-weight-bold">Dr. Bustamante, Dra. Rocchi</p>
 								</div>
 
 							</div>
@@ -278,6 +328,7 @@
 									<p>Permite mantener tu dentición natural,
 										comer con comodidad y si se cuida adecuadamente durará tanto como el resto
 										de tu dentición.</p>
+									<p class="text-right font-weight-bold">Dr. Bustamante, Dra. Rocchi</p>
 								</div>
 
 							</div>
@@ -299,12 +350,13 @@
 										que padecen trastornos.</p>
 									<p>Se previenen futuros desgastes, roturas,
 										contracturas y dolores de cabeza.</p>
+									<p class="text-right font-weight-bold">Dra. Rocchi, Dr. Bustamante</p>
 								</div>
 
 							</div>
 						</div>
 					</div>
-					
+
 
 				</div>
 			</div>
@@ -313,7 +365,7 @@
 
 
 
-		
+
 		<div class="boxes d-flex flex-lg-row flex-column align-items-start justify-content-start">
 
 			<!-- Box -->
@@ -347,10 +399,10 @@
 
 		</div>
 
-		
+
 
 		<footer class="footer">
-			
+
 			<div class="footer_content">
 				<div class="container">
 					<div class="row">
@@ -431,11 +483,16 @@
 	</div>
 
 	<script src="js/jquery-3.3.1.min.js"></script>
+
 	<script src="styles/bootstrap4/popper.js"></script>
 	<script src="styles/bootstrap4/bootstrap.min.js"></script>
 	<script src="plugins/easing/easing.js"></script>
 	<script src="plugins/parallax-js-master/parallax.min.js"></script>
 	<script src="js/custom.min.js"></script>
+	<script src="js/jquery.bcSwipe.min.js"></script>
+	<script>
+		$('.carousel').bcSwipe({ threshold: 50 });
+	</script>
 </body>
 
 </html>
