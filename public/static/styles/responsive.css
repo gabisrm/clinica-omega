@@ -191,6 +191,7 @@
 	.footer_phone
 	{
 		margin-left: 80px;
+	}
 	/* }
 	.footer_links ul li:not(:last-child)
 	{
@@ -528,7 +529,7 @@
 	}
 
 	#intro_logo{
-		max-width: 30%;
+		max-width: 60%;
 		
 	}
 
@@ -597,6 +598,11 @@
 	#carouselExampleSlidesOnly2 {
 		margin-left: 60px;
 		margin-right: 60px;
+	}
+
+	#intro_logo{
+		max-width: 75%;
+		
 	}
 }
 
@@ -752,6 +758,13 @@
 		margin-left: 40px;
 		margin-right: 40px;
 	}
+
+	#intro_logo{
+		max-width: 95%;
+		
 	}
 
-}
+	}
+
+	
+
